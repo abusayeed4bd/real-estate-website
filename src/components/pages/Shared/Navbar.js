@@ -5,7 +5,7 @@ const Navbar = () => {
     const navItem = <>
         <li><Link className='uppercase font-semibold' to="/">Home</Link></li>
         <li><Link className='uppercase font-semibold' to="/about">About</Link></li>
-        <li><Link className='uppercase font-semibold' to="/">Blog</Link></li>
+        <li><Link className='uppercase font-semibold' to="/blog">Blog</Link></li>
         <li><Link className='uppercase font-semibold' to="/contact">Contact</Link></li>
     </>
     return (
@@ -20,7 +20,7 @@ const Navbar = () => {
                         {navItem}
                     </ul>
                 </div>
-                <a class="btn btn-ghost normal-case text-xl">Real Estate</a>
+                <Link to="/" class="btn btn-ghost uppercase text-primary font-bold text-2xl">Real Estate</Link>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">
@@ -28,7 +28,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div class="navbar-end">
-                <a class="btn btn-primary">Get started</a>
+                <Link to="/contact" class="btn btn-primary">Get started</Link>
             </div>
         </div>
 

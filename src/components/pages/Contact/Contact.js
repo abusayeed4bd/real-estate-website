@@ -3,17 +3,36 @@ import React from 'react';
 const Contact = () => {
     return (
         <div>
-            <div class="hero min-h-screen bg-base-200">
-                <div class="hero-content flex-col lg:flex-row">
-                    <img src="https://placeimg.com/260/400/arch" class="max-w-sm rounded-lg shadow-2xl" />
-                    <div>
-                        <h1 class="text-5xl font-bold">Box Office News!</h1>
-                        <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button class="btn btn-primary">Get Started</button>
+
+            <div class="card flex-shrink-0 w-full max-w-sm mx-auto my-8 shadow-2xl bg-base-100">
+                <div class="card-body">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Name</span>
+                        </label>
+                        <input type="text" placeholder="email" class="input input-bordered" />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Email</span>
+                        </label>
+                        <input type="text" placeholder="password" class="input input-bordered" />
+
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Email</span>
+                        </label>
+                        <textarea className='input input-bordered h-[150px]' name="" id="" cols="30" rows="10" placeholder='Your message'></textarea>
+
+                    </div>
+                    <div class="form-control mt-6">
+                        <button class="btn btn-primary">Send</button>
                     </div>
                 </div>
             </div>
         </div>
+
     );
 };
 

@@ -7,11 +7,12 @@ const Home = () => {
     const [location, setLocation] = useState('');
     const [price, setPrice] = useState('');
     const [type, setType] = useState('');
+    const [when, setWhen] = useState('');
     useEffect(() => {
         fetch('fakeData.json')
             .then(res => res.json())
             .then(data => setProperties(data))
-    }, [location, price])
+    }, [location, price, type])
 
 
     // ----------------------
@@ -29,6 +30,9 @@ const Home = () => {
     const handleType = (e) => {
         setType(e.target.value)
     }
+    const handleDate = (e) => {
+        setWhen(e.target.value)
+    }
 
 
     const handleSearch = () => {
@@ -37,9 +41,11 @@ const Home = () => {
             .filter(property => property.location === (location ? location : property.location))
 
             .filter(property => property.price >= (parseInt(price) ? parseInt(price) : property.price))
+            .filter(property => property.type === (type ? type : property.type))
+            .filter(property => property.when === (when ? when : property.when))
         setProperties(searched)
     }
-    const functions = [handleLocation, handleprice, handleType, handleSearch]
+    const functions = [handleLocation, handleprice, handleType, handleSearch, handleDate]
 
 
     return (

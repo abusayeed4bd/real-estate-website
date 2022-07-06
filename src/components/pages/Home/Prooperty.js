@@ -8,11 +8,12 @@ const Prooperty = ({ property }) => {
         <Link to="/">
 
             <div class="card rounded-lg card-compact w-[90%] mx-auto mb-5 bg-base-100 shadow-xl text-left">
+
                 <figure><img className='h-[219px] w-full' src={img} alt="Shoes" /></figure>
                 <div class="card-body">
                     <h1 className="text-primary text-2xl uppercase font-bold">${price}</h1>
                     <h2 class="card-title font-bold text-2xl">{name}
-
+                        <div class="badge badge-secondary">{type}</div>
                     </h2>
 
                     <div className='flex items-center'>

@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     const navItem = <>
         <li><Link className='uppercase font-semibold' to="/">Home</Link></li>
-        <li><Link className='uppercase font-semibold' to="/">About</Link></li>
+        <li><Link className='uppercase font-semibold' to="/about">About</Link></li>
         <li><Link className='uppercase font-semibold' to="/">Blog</Link></li>
-        <li><Link className='uppercase font-semibold' to="/">Contact</Link></li>
+        <li><Link className='uppercase font-semibold' to="/contact">Contact</Link></li>
     </>
     return (
 
-        <div class="navbar bg-base-100 shadow-sm">
+        <div class="navbar bg-base-100 shadow-sm sticky top-0 z-50">
             <div class="navbar-start">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">

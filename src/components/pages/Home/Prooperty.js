@@ -3,18 +3,19 @@ import { Link } from 'react-router-dom'
 
 const Prooperty = ({ property }) => {
 
-    const { name, img, description, price, location, type } = property;
+    const { name, img, description, price, location, type, when } = property;
     return (
         <Link to="/">
 
             <div class="card rounded-lg card-compact w-[90%] mx-auto mb-5 bg-base-100 shadow-xl text-left">
 
                 <figure><img className='h-[219px] w-full' src={img} alt="Shoes" /></figure>
-                <div class="card-body">
+                <div class="card-body ">
                     <h1 className="text-primary text-2xl uppercase font-bold">${price}</h1>
                     <h2 class="card-title font-bold text-2xl">{name}
                         <div class="badge badge-secondary">{type}</div>
                     </h2>
+                    <p className='text-md text-slate-400'>When need: {when}</p>
 
                     <div className='flex items-center'>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -30,6 +31,7 @@ const Prooperty = ({ property }) => {
                     <p className='text-slate-500 text-lg'>{description}</p>
 
                 </div>
+
             </div>
         </Link>
     );
